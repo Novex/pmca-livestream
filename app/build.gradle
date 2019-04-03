@@ -1,0 +1,25 @@
+apply plugin: "com.android.application"
+
+android {
+    compileSdkVersion 16
+
+    defaultConfig {
+        applicationId "com.github.sebbity.sonyactioncam.stream"
+        manifestPlaceholders = [activityName: "MainActivity"]
+
+        minSdkVersion 16
+        targetSdkVersion 16
+
+        versionCode "git -C ${projectDir} rev-list --first-parent --count HEAD".execute().text.trim().toInteger()
+        versionName "git -C ${projectDir} describe --always --tags --dirty".execute().text.trim()
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compileOnly 'com.github.ma1co.OpenMemories-Framework:stubs:-SNAPSHOT'
+}

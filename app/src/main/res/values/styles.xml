@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionCamTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:listPreferredItemHeight">0px</item>
+    </style>
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">16px</item>
+    </style>
+
+    <style name="ListViewStyle" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/outline</item>
+        <item name="android:divider">@null</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+</resources>
